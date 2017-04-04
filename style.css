@@ -1,0 +1,316 @@
+/*font-family: 'Cinzel', serif;
+font-family: 'Playfair Display SC', serif;*/
+html{
+    box-sizing: border-box;
+    text-align:center;
+    font-family: 'Lato',sans-serif;
+}
+*, *:before, *after{
+    box-sizing: inherit;
+}
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+a{
+    text-decoration: none;
+    color:white;
+}
+body{ scroll-behavior: smooth;}
+/*Barra de navegacion*/
+nav{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    position:fixed;
+    top:0;
+    z-index: 3;
+    width:100%;
+    min-height: 7%;
+    background-color:#262626;
+    transition: all 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+    /*nav->Lista Botones*/
+nav>.barra-navegador{
+    width:90%;
+    padding:5px;
+}
+.barra-navegador>.lista-botones{
+    width:60%;
+    margin:0 auto;
+    display:flex;
+    justify-content: space-around;
+}
+.barra-navegador>.lista-botones>.nav-boton{
+    display:inline-block;
+    font-size:90%;
+    margin: 5px 20px;
+    transition: transform 0.7s ease;
+}
+.nav-boton>a{
+    color:#767676;
+    transition: color .3s ease;
+}
+.nav-boton>a:hover{
+    color: rgb(102,102,165);
+}
+    /*nav->Boton unico*/
+.boton-opciones{
+    visibility: hidden;
+    display: none;
+}
+
+    /*nav->menu de opciones Boton unico */
+.menu-boton-opciones{
+    width:100%;
+    height: 100%;
+}
+    /*nav->Ajustar tamaño para hacerlo responsive*/
+@media screen and (max-width:800px){
+    nav{
+        top:2%;
+        left:2%;
+        width:4%;
+        min-width: fit-content;
+    }
+    .barra-navegador{
+        display:none;
+        visibility: hidden;
+    }
+    .boton-opciones{
+        display: initial;
+        visibility: visible;
+        width: 30px;
+        background-image: url("menu.svg");
+        background-size: cover;
+    }
+}
+/*Header*/
+.fondo-principal-cabecera{
+    width:100%;
+    height:100vh;
+    background-image:url(fondo-cabecera.jpg);
+    background-size:cover;
+    background-position: center;
+}
+    /*Header->Filtro*/
+.fondo-principal-cabecera>.capa-filtro{
+    background-color: rgba(0, 0, 175, 0.5);
+    height: 100%;
+    width: 100%;
+}
+.capa-filtro>article{
+    position:relative;
+    top: 40%;
+    color:white;
+}
+.capa-filtro>article h2{
+    font-size: 250%;
+    font-weight:bold;
+}
+/*Primer Fondo*/
+section.primer-fondo{
+    background-color:#f3f3f3;
+    min-height: fit-content;
+    padding: 4% 0;
+    width:100%;
+}
+.fondo-primero-habilidades{
+    height: fit-content;
+    min-height:90vh;
+    display:flex;
+    width:95%;
+    flex-flow: row wrap;
+    align-items:stretch;
+    justify-content: space-around;
+    margin:0 auto;
+}
+    /*Primer-fondo-> Titulo*/
+.contenedor-titulo{
+    width:100%;
+    margin-top: 4%;
+}
+.contenedor-titulo>h2{
+    font-size:40px;
+    font-family: 'Cincel', serif;
+    text-transform: uppercase;
+    margin-bottom:-.8rem;
+}
+.contenedor-titulo>hr{
+    display: block;
+    margin: 1rem auto;
+    width:10%;
+    border-style: inset;
+    border-width: 1px;
+}
+    /*Primer-fondo-> Habilidades*/
+.contenedor-habilidades{
+    min-height: fit-content;
+    width:33%;
+}
+.contenedor-habilidades>header>img{
+    width:110px;
+    margin:10px;
+}
+.contenedor-habilidades>article{
+    text-align:center;
+    width:95%;
+    margin:0 auto;
+    padding:2px;
+    border-top:1px solid  #b6b6b6;
+    display:flex;
+    flex-direction: column;
+}
+.contenedor-habilidades>article>h3{
+    line-height: 1.6rem;
+    font-size:130%;
+    margin:10px;
+}
+.contenedor-habilidades>article>#titulillo{
+    margin:10px;
+    font-weight: bold;
+}
+.contenedor-habilidades>article>#texto{
+    margin-top:1rem;
+}
+    /*Primer-fondo->Responsive*/
+@media only screen and (max-width:800px){
+    .fondo-primero-habilidades{
+        width:90%;
+    }
+    .contenedor-habilidades{
+       width:100%;
+       min-height: fit-content;
+       margin:4% 0;
+    }
+    .contenedor-titulo{
+        order:1;
+    }
+    .habilidad1{
+        order:3;
+    }
+    .habilidad2{
+        order:2;
+    }
+    .habilidad3{
+        order:4;
+    }   
+}
+/*Segundo Fondo*/
+section.segundo-fondo{
+    min-height: fit-content;
+    height:100vh;
+    width:100%;
+}
+.fondo-segundo-proyectos{
+    min-height: fit-content;
+    width:90%;
+    margin:0 auto;
+}
+    /*SEgundo Fondo->Lista-proyectos*/
+.lista-proyectos{
+    display:flex;
+    margin:0 auto;
+    justify-content: space-between;
+    align-content: center;
+    align-items:stretch;
+    flex-flow:row wrap;
+    width:90%;
+}
+        /*Lista-proyecto --> proyecto*/
+.proyecto{
+    position:relative;
+    width:30%;
+    height:200px;
+    margin: 25px 5px;
+    box-shadow: 0 30px 14px -14px rgba(0, 0, 0, .6);
+    transition:transform 0.5s ease,
+                box-shadow .5s ease;
+}
+.proyecto:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 45px 20px -30px rgba(0, 0, 0, .4);
+}
+            /*Proyecto ---> Filtro/Overlay*/
+.proyecto>.filtro-proyecto{
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    text-align: center;
+    position:absolute;
+    padding:10px;
+    width:100%;
+    height:100%;
+    opacity:0;
+    background-color: rgba(0, 110, 175, .5);
+    transition: opacity 0.5s ease;
+    z-index: 1;
+    color:white;
+}
+.proyecto>.filtro-proyecto:hover{
+    opacity:1;
+    transition: opacity 0.5s ease;
+    transition-delay: .5s;
+}
+.proyecto>.filtro-proyecto>.boton-link-proyecto{
+    color:rgba(255, 255, 255, 0.5);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding:5px;
+    width:40%;
+    height:15%;
+    border:2px solid rgba(255, 255, 255, 0.5);
+    transition: color 0.5s ease,
+                border 0.5s ease,
+                transform .5s ease;   
+}
+.proyecto>.filtro-proyecto>.boton-link-proyecto:hover{
+    color:white;
+    border:2px solid white;
+    transform:scale(1.1);
+}
+            /*Proyecto ---> Imagen del proyecto*/
+.proyecto>.imagen-proyecto{
+    width:100%;
+    height: 100%;   
+    overflow: hidden;
+}
+.proyecto>.imagen-proyecto>img{
+    width:100%;
+    height: 100%;
+    transition:transform 0.5s ease;
+    z-index: 10;
+}
+.proyecto:hover>.imagen-proyecto>img{
+    transform: scale(1.1);
+}
+    /*Segundo Fondo -> Responsive*/
+@media only screen and (max-width: 1000px){
+    .proyecto{
+        width:40%;
+    }
+    .lista-proyectos{
+        justify-content: space-around;
+    }
+}
+@media only screen and (max-width:800px){
+    .proyecto{
+        width:100%;
+        height:auto;
+    }
+    .lista-proyectos{
+        align-items:center;
+        flex-direction: column;
+    }
+    .proyecto>.imagen-proyecto{
+        height: 250px;
+    }
+}
+
