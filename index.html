@@ -6,35 +6,40 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Responsive Desing Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Cinzel|Playfair+Display+SC" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel|Playfair+Display+SC|Open+Sans" rel="stylesheet">
 </head>
 <body>
     <nav>
         <div class="barra-navegador">
             <ul class="lista-botones">
-                <li class="nav-boton boton1"><a class="nav-boton-ancla" id="#boton1">Boton1</a></li>
-                <li class="nav-boton boton2"><a class="nav-boton-ancla" id="#boton2">boton2</a></li>
-                <li class="nav-boton boton3"><a class="nav-boton-ancla" id="#boton3">boton3</a></li>
-                <li class="nav-boton boton4"><a class="nav-boton-ancla" id="#boton4">boton4</a></li>
+                <li class="nav-boton boton1"><a class="nav-boton-ancla" href="#boton1">Header</a></li>
+                <li class="nav-boton boton2"><a class="nav-boton-ancla" href="#boton2">Skills</a></li>
+                <li class="nav-boton boton3"><a class="nav-boton-ancla" href="#boton3">Projects</a></li>
+                <li class="nav-boton boton4"><a class="nav-boton-ancla" href="#boton4">About me</a></li>
             </ul>
         </div>
         <div class="boton-opciones">
         </div>
-        <!--<div class="menu-boton-opciones">
-            
-        </div>-->
+        <div class="menu-boton-opciones" data-click="si">
+            <ul class="lista-botones-mobile" data-click="si">
+                <li class="mobile-boton mb-boton1" data-click="si"><a class="mb-boton-ancla" href="#boton1">Header</a></li>
+                <li class="mobile-boton mb-boton2" data-click="si"><a class="mb-boton-ancla" href="#boton2">Skills</a></li>
+                <li class="mobile-boton mb-boton3" data-click="si"><a class="mb-boton-ancla" href="#boton3">Projects</a></li>
+                <li class="mobile-boton mb-boton4" data-click="si"><a class="mb-boton-ancla" href="#boton4">About me</a></li>
+            </ul>
+        </div>
     </nav>
-    <header>
+    <header id="boton1">
         <div class="fondo-principal-cabecera">
             <div class="capa-filtro">
                 <article>
-                    <h2>Web-Development</h2>
+                    <h2>Web Development</h2>
                     <p>Junior Front-End</p>
                 </article>
             </div>
         </div>
     </header>
-    <section class="primer-fondo">
+    <section class="primer-fondo" id="boton2">
         <div class="fondo-primero-habilidades">
             <div class="contenedor-titulo">
                 <h2>Skills &amp; learning</h2>
@@ -71,9 +76,12 @@
             </div>
         </div>
     </section>
-    <section class="segundo-fondo">
+    <section class="segundo-fondo" id="boton3">
         <div class="fondo-segundo-proyectos">
-            <div class="buscador-proyectos"></div>
+            <div class="titulo-proyectos">
+                 <h2>Latest Projects</h2>
+                 <p></p>
+            </div>
             <div class="lista-proyectos">
                 <div class="proyecto proyecto1">
                     <div class="filtro-proyecto">
@@ -113,53 +121,87 @@
                 </div>
                 <div class="proyecto proyecto5">
                     <div class="filtro-proyecto">
-                        <p>Una aplicacion web usando la API de Twicht para saber si un canal o una lista de canales se encuentra online</p>
-                        <a class="boton-link-proyecto" href="">Visit Project</a>
+                        <p>Keyboard with sound</p>
+                        <a class="boton-link-proyecto" href="https://gabrira.github.io/JS30-Propia-Web/Ejercicio-1/">Visit Project</a>
                     </div>
                     <div class="imagen-proyecto">
-                        <img src="Proyectos-Imagen/Twitch-API.jpg" alt="">
+                        <img src="Proyectos-Imagen/Sound-Keys.jpg" alt="sound-keys">
                     </div>
                 </div><div class="proyecto proyecto6">
                     <div class="filtro-proyecto">
-                        <p>Una aplicacion web usando la API de Twicht para saber si un canal o una lista de canales se encuentra online</p>
-                        <a class="boton-link-proyecto" href="">Visit Project</a>
+                        <p>A copy of the principal JavaScript30 web</p>
+                        <a class="boton-link-proyecto" href="https://gabrira.github.io/JS30-Propia-Web/Copia-Web/">Visit Project</a>
                     </div>
                     <div class="imagen-proyecto">
-                        <img src="Proyectos-Imagen/Twitch-API.jpg" alt="">
+                        <img src="Proyectos-Imagen/JS30-Copy.jpg" alt="JS30-Copy">
                     </div>
                 </div>
                 <div class="proyecto proyecto7">
                     <div class="filtro-proyecto">
-                        <p>Una aplicacion web usando la API de Twicht para saber si un canal o una lista de canales se encuentra online</p>
-                        <a class="boton-link-proyecto" href="">Visit Project</a>
+                        <p>Playing with flexbox</p>
+                        <a class="boton-link-proyecto" href="https://gabrira.github.io/JS30-Propia-Web/Ejercicio-Flex-Panels/">Visit Project</a>
                     </div>
                     <div class="imagen-proyecto">
-                        <img src="Proyectos-Imagen/Twitch-API.jpg" alt="">
+                        <img src="Proyectos-Imagen/Flex-panels.jpg" alt="Flex-panels">
                     </div>
                 </div>
                 <div class="proyecto proyecto8">
                     <div class="filtro-proyecto">
-                        <p>Una aplicacion web usando la API de Twicht para saber si un canal o una lista de canales se encuentra online</p>
-                        <a class="boton-link-proyecto" href="">Visit Project</a>
+                        <p>Simon Game</p>
+                        <a class="boton-link-proyecto" href="http://codepen.io/GabriRa/full/bqEgWx/">Visit Project</a>
                     </div>
                     <div class="imagen-proyecto">
-                        <img src="Proyectos-Imagen/Twitch-API.jpg" alt="">
+                        <img src="Proyectos-Imagen/Simon-Game.jpg" alt="Simon-Game">
                     </div>
                 </div>
                 <div class="proyecto proyecto9">
                     <div class="filtro-proyecto">
-                        <p>Una aplicacion web usando la API de Twicht para saber si un canal o una lista de canales se encuentra online</p>
-                        <a class="boton-link-proyecto" href="">Visit Project</a>
+                        <p>Simple weather app</p>
+                        <a class="boton-link-proyecto" href="http://codepen.io/GabriRa/full/apYaXj/">Visit Project</a>
                     </div>
                     <div class="imagen-proyecto">
-                        <img src="Proyectos-Imagen/Twitch-API.jpg" alt="">
+                        <img src="Proyectos-Imagen/Weather-APP.jpg" alt="Wheater-APP">
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <section class="tercer-fondo" id="boton4">
+        <div class="informacion-personal">
+            <div class="columna-informacion cl-info-1">
+                <div class="caja-informacion cj-info-izq cj-info-1-izq">
+                    <p><label>Name: </label>Gabriel Rabello Astolfo</p>
+                </div>
+                <div class="caja-informacion cj-info-izq cj-info-2-izq">
+                    <p><label>Location: </label>Toledo-Madrid</p>
+                </div>
+                <div class="caja-informacion cj-info-izq cj-info-3-izq">
+                    <p><label>Nationality: </label>Brazilian, living in Spain since 4</p>
+                </div>
+                <div class="caja-informacion cj-info-izq cj-info-4-izq">
+                    <p><label>Hobbies: </label> Sports(specially with teamplay), videogames, science, animals and anything related with computers </p>
+                </div>
+            </div>
+            <div class="columna-informacion cl-info-2">
+                <div class="caja-informacion cj-info-der cj-info-1-der">
+                    <p><label>Birthday: </label> 26th June 1997</p>
+                </div>
+                <div class="caja-informacion cj-info-der cj-info-2-der">
+                    <p><label>Languages: </label>Spanish, english</p>
+                </div>
+                <div class="caja-informacion cj-info-der cj-info-3-der">
+                    <p><label>Email: </label>GabriRabelloT@gmail.com</p>
+                </div>
+                <div class="caja-informacion cj-info-der cj-info-4-der">
+                    <p><label>Interested to Learn: </label>React, Angular, Node, Express, MongoDB and eneything related with data visualization </p>
+                </div>
+            </div>
+        </div>
+    </section>
     <footer>
+
     </footer>
+    <script src="jquery-3.2.0.min.js"></script>
     <script src="porfolio-js.js"></script>
 </body>
 </html>

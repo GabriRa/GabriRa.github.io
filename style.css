@@ -3,7 +3,7 @@ font-family: 'Playfair Display SC', serif;*/
 html{
     box-sizing: border-box;
     text-align:center;
-    font-family: 'Lato',sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 *, *:before, *after{
     box-sizing: inherit;
@@ -32,7 +32,6 @@ nav{
     width:100%;
     min-height: 7%;
     background-color:#262626;
-    transition: all 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
     /*nav->Lista Botones*/
 nav>.barra-navegador{
@@ -60,35 +59,80 @@ nav>.barra-navegador{
 }
     /*nav->Boton unico*/
 .boton-opciones{
-    visibility: hidden;
-    display: none;
+    visibility:hidden;
+    background-image:url("menu.svg");
+    background-position: center;
+    background-size:cover;
+    position:fixed;
+    width:30px;
+    height:30px;
+    left:1rem;
+    top:1rem;
 }
-
     /*nav->menu de opciones Boton unico */
 .menu-boton-opciones{
+    visibility:hidden;
+    display:none;
+    background-color:rgba(0, 0, 0, .8);
     width:100%;
-    height: 100%;
+    height:0;
+    transition: height 1s ease;
+    align-items:center;
+    justify-content: center;
 }
-    /*nav->Ajustar tamaño para hacerlo responsive*/
+.menu-boton-opciones-pulsado{
+    height:100vh;
+}
+        /*Menu opciones-> Lista de opciones movil*/
+.lista-botones-mobile{
+    height: 50%;
+    width:70%;
+    display:flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items:center;
+    /*background-color: rgba(0, 0, 0, .4);*/
+    border-radius:10px;
+}
+.lista-botones-mobile>.mobile-boton{
+    display:none;
+    visibility:hidden;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+    width:fit-content;
+    border-radius:20px;
+    /*background-color:rgba(38,38,38, 0.5);*/
+}
+.lista-botones-mobile>li.mobile-boton-pulsado{
+    display:flex;
+    visibility:visible;
+}
+.mobile-boton-pulsado>a.mb-boton-ancla{
+    background-color:rgba(255, 255, 255, 0.2);
+    border-radius:20px;
+    border:2px solid white;
+    padding:1rem;
+}
+/*nav->Ajustar tamaño para hacerlo responsive*/
 @media screen and (max-width:800px){
     nav{
-        top:2%;
-        left:2%;
-        width:4%;
-        min-width: fit-content;
+        visibility:hidden;
     }
     .barra-navegador{
         display:none;
         visibility: hidden;
     }
     .boton-opciones{
-        display: initial;
-        visibility: visible;
-        width: 30px;
-        background-image: url("menu.svg");
-        background-size: cover;
+        visibility:visible;
     }
+    .menu-boton-opciones{
+        visibility:visible;
+        display:flex;
+    }
+
 }
+
 /*Header*/
 .fondo-principal-cabecera{
     width:100%;
@@ -111,6 +155,8 @@ nav>.barra-navegador{
 .capa-filtro>article h2{
     font-size: 250%;
     font-weight:bold;
+    font-family: 'Playfair Display SC', serif;
+    margin-bottom:1rem;
 }
 /*Primer Fondo*/
 section.primer-fondo{
@@ -132,7 +178,7 @@ section.primer-fondo{
     /*Primer-fondo-> Titulo*/
 .contenedor-titulo{
     width:100%;
-    margin-top: 4%;
+    /*margin-top: 4%;*/
 }
 .contenedor-titulo>h2{
     font-size:40px;
@@ -172,10 +218,12 @@ section.primer-fondo{
 }
 .contenedor-habilidades>article>#titulillo{
     margin:10px;
-    font-weight: bold;
+    font-size:110%;
+    font-weight: 900;
 }
 .contenedor-habilidades>article>#texto{
     margin-top:1rem;
+    color:#767676;
 }
     /*Primer-fondo->Responsive*/
 @media only screen and (max-width:800px){
@@ -205,11 +253,34 @@ section.segundo-fondo{
     min-height: fit-content;
     height:100vh;
     width:100%;
+    background-image:url("fondo-lista-2.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
 }
 .fondo-segundo-proyectos{
     min-height: fit-content;
     width:90%;
     margin:0 auto;
+}
+    /*Segundo Fondo->Titulo-proyectos*/
+.titulo-proyectos{
+    position:relative;
+    top:0;
+    background-color:#262626;
+    width:fit-content;
+    padding:10px;
+    border-right:2px solid yellow;
+    border-left:2px solid yellow;
+    box-shadow:0 2px 6px 2px rgba(0, 0, 0, 0.5);
+    margin:0 auto 1rem auto;
+    /*border-bottom:2px solid yellow;*/
+}
+.titulo-proyectos>h2{
+    color:white;
+    font-size: 40px;
+    font-family: 'Playfair Display SC', serif;
+    text-transform: uppercase;
 }
     /*SEgundo Fondo->Lista-proyectos*/
 .lista-proyectos{
@@ -228,6 +299,7 @@ section.segundo-fondo{
     height:200px;
     margin: 25px 5px;
     box-shadow: 0 30px 14px -14px rgba(0, 0, 0, .6);
+    border: 4px solid rgba(0, 0, 0, .4);
     transition:transform 0.5s ease,
                 box-shadow .5s ease;
 }
@@ -313,4 +385,76 @@ section.segundo-fondo{
         height: 250px;
     }
 }
-
+/*Tercer Fondo*/
+section.tercer-fondo{
+    height:fit-content;
+    width:100%;
+    display:flex;
+    align-items: center;
+    background-color: #161616;
+    padding-bottom: 2rem;
+}
+    /*Tercer Fondo-> Informacion Personal*/
+.informacion-personal{
+    background-color:#161616;
+    width:100%;
+    height: fit-content;
+    padding:2rem 0;
+    display:flex;
+    justify-content: space-around;
+}
+        /*Informacion-Personal -> Columnas*/
+.columna-informacion{
+    min-height: 50vh;
+    width:45%;
+    display:flex;
+    flex-flow: column nowrap;
+    justify-content:space-around;
+    align-items:center;
+    background-color:#262626;
+    box-shadow:0 0 10px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+.columna-informacion>.caja-informacion{
+    margin: 20px 0;
+    min-height:fit-content;
+    height:3rem;
+    width:90%;
+    background-color:#161616;
+    display:flex;
+    align-items:center;
+}
+.columna-informacion>.cj-info-izq{
+    border-right:2px solid yellow;
+    transform:translateX(-100%);
+    transition: transform 1s cubic-bezier(0.2,-0.37, 0.13, 1.23);
+    text-align:left;
+    padding-left:1rem;
+}
+.columna-informacion>.cj-info-der{
+    border-left:2px solid yellow;
+    transform:translateX(100%);
+    transition: transform 1s cubic-bezier(0.2,-0.37, 0.13, 1.23);
+    text-align: right;
+    padding-right: 1rem;
+}
+.caja-informacion.mostrar-cj{
+    transform: translateX(0);
+}
+.caja-informacion>p{
+    padding:5px;
+    color:white;
+}
+.caja-informacion>p>label{
+    color:yellow;
+}
+@media only screen and (max-width:800px){
+    .informacion-personal{
+        flex-flow: column nowrap;
+    }
+    .columna-informacion{
+        width:100%;
+        height:50%;
+        margin:1rem;
+    }
+}
