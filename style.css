@@ -20,7 +20,6 @@ a{
     text-decoration: none;
     color:white;
 }
-body{ scroll-behavior: smooth;}
 /*Barra de navegacion*/
 nav{
     display:flex;
@@ -158,6 +157,11 @@ nav>.barra-navegador{
     font-family: 'Playfair Display SC', serif;
     margin-bottom:1rem;
 }
+.capa-filtro>article>p>#equis{
+    margin:0 1rem;
+    color:black;
+    font-weight: 900;
+}
 /*Primer Fondo*/
 section.primer-fondo{
     background-color:#f3f3f3;
@@ -215,11 +219,12 @@ section.primer-fondo{
     line-height: 1.6rem;
     font-size:130%;
     margin:10px;
+    font-weight: 900;
 }
 .contenedor-habilidades>article>#titulillo{
     margin:10px;
     font-size:110%;
-    font-weight: 900;
+    font-weight: 600;
 }
 .contenedor-habilidades>article>#texto{
     margin-top:1rem;
@@ -436,7 +441,7 @@ section.tercer-fondo{
     transform:translateX(100%);
     transition: transform 1s cubic-bezier(0.2,-0.37, 0.13, 1.23);
     text-align: right;
-    padding-right: 1rem;
+    padding-left: 1rem;
 }
 .caja-informacion.mostrar-cj{
     transform: translateX(0);
@@ -457,4 +462,7 @@ section.tercer-fondo{
         height:50%;
         margin:1rem;
     }
+}
+.efectoNav>a{
+    color:white;
 }

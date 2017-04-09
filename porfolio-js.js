@@ -30,9 +30,35 @@ $(document).ready(function(){
         }
     });
 
-    // Jquery for making the effect of a smooth scroll
-    const nav_altura= $("nav").outerHeight();
-    var ancho_pantalla = window.innerWidth;
+    // Fuction effect for the nav bar
+    function efectos(){
+        var efectoNav1 = document.querySelector("#boton1");
+        var efectoNav2 = document.querySelector("#boton2");
+        var efectoNav3 = document.querySelector("#boton3");
+        var efectoNav4 = document.querySelector("#boton4");
+        var alturaPantalla = window.scrollY+window.innerHeight - (efectoNav1.scrollHeight/2);
+        if (alturaPantalla < efectoNav2.scrollHeight){
+            document.querySelector(".boton1").classList.add("efectoNav");
+            document.querySelector(".boton2").classList.remove("efectoNav");
+            document.querySelector(".boton3").classList.remove("efectoNav");
+            document.querySelector(".boton4").classList.remove("efectoNav");
+        } else if (alturaPantalla > efectoNav2.offsetTop && alturaPantalla < efectoNav3.offsetTop){
+            document.querySelector(".boton1").classList.remove("efectoNav");
+            document.querySelector(".boton2").classList.add("efectoNav");
+            document.querySelector(".boton3").classList.remove("efectoNav");
+            document.querySelector(".boton4").classList.remove("efectoNav");
+        } else if (alturaPantalla > efectoNav3.offsetTop && alturaPantalla < efectoNav4.offsetTop){
+            document.querySelector(".boton1").classList.remove("efectoNav");
+            document.querySelector(".boton2").classList.remove("efectoNav");
+            document.querySelector(".boton3").classList.add("efectoNav");
+            document.querySelector(".boton4").classList.remove("efectoNav");
+        } else if (alturaPantalla > efectoNav4.offsetTop){
+            document.querySelector(".boton1").classList.remove("efectoNav");
+            document.querySelector(".boton2").classList.remove("efectoNav");
+            document.querySelector(".boton3").classList.remove("efectoNav");
+            document.querySelector(".boton4").classList.add("efectoNav");
+        }
+    }
     
     //function for a smoothScroll
     function smoothScroll(e){
@@ -45,7 +71,7 @@ $(document).ready(function(){
         }, 1000);
     }
 
-    // function debounce grabed from internet GitHub: @nmsdvid
+    // function debounce grabed from GitHub: @nmsdvid
     function debounce(func, wait, immediate) {
         var timeout;
         return function() {
@@ -73,8 +99,11 @@ $(document).ready(function(){
     
     // Function with debounce
     var slideIn = debounce(activador, 10); 
+    var activarEfectos= debounce(efectos, 20);
     //Event listener for scroll
-    window.addEventListener("scroll", slideIn)
+    window.addEventListener("scroll", slideIn);
+    //Event for effects on the nav bar
+    window.addEventListener("scroll", activarEfectos);
     //Butons with a smooth scroll
     $(".nav-boton-ancla, .mb-boton-ancla").click(smoothScroll);
 });
