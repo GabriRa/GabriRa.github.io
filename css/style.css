@@ -59,7 +59,7 @@ nav>.barra-navegador{
     /*nav->Boton unico*/
 .boton-opciones{
     visibility:hidden;
-    background-image:url("menu.svg");
+    background-image:url(../svg/menu.svg);
     background-position: center;
     background-size:cover;
     position:fixed;
@@ -136,7 +136,7 @@ nav>.barra-navegador{
 .fondo-principal-cabecera{
     width:100%;
     height:100vh;
-    background-image:url(fondo-cabecera.jpg);
+    background-image:url(../Fondos/fondo-cabecera.jpg);
     background-size:cover;
     background-position: center;
 }
@@ -258,7 +258,7 @@ section.segundo-fondo{
     min-height: fit-content;
     height:100vh;
     width:100%;
-    background-image:url("fondo-lista-2.jpg");
+    background-image:url(../Fondos/fondo-lista-2.jpg);
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -379,7 +379,9 @@ section.segundo-fondo{
 }
 @media only screen and (max-width:800px){
     .proyecto{
-        width:100%;
+        min-width:300px;
+        width: 70%;
+        max-width: 400px;
         height:auto;
     }
     .lista-proyectos{
